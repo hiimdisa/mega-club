@@ -8,7 +8,3 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Home />
   </React.StrictMode>
 )
-
-
-
-fix: add main.jsx
