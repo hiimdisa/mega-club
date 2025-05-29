@@ -1,4 +1,4 @@
-// Tariff toggle (Day/Evening)
+// Переключение День/Вечер
 const btns = document.querySelectorAll('.toggle-btn');
 const lists = document.querySelectorAll('.tariffs-list');
 btns.forEach(btn => {
@@ -11,10 +11,9 @@ btns.forEach(btn => {
     });
 });
 
-// Flip-card on mobile (touch)
+// Flip карточки на мобиле по клику
 document.querySelectorAll('.flip-card').forEach(card => {
     card.addEventListener('click', function(e) {
-        // только если ширина экрана <= 780px (мобилка)
         if (window.innerWidth <= 780) {
             this.classList.toggle('flipped');
         }
