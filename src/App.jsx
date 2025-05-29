@@ -1,5 +1,13 @@
 import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
+const Card = ({ children, className }) => (
+  <div className={`rounded-xl border border-white/10 bg-white/5 shadow-sm ${className || ""}`}>
+    {children}
+  </div>
+);
+const CardContent = ({ children, className }) => (
+  <div className={`p-4 ${className || ""}`}>{children}</div>
+);
+
 import { motion } from "framer-motion";
 
 export default function Home() {
