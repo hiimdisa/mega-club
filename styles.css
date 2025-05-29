@@ -1,108 +1,114 @@
-body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #0f0f0f;
-    color: #ffffff;
-}
-.gradient-text {
-    background: linear-gradient(90deg, #ff4d4d, #f9cb28);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
-.gradient-border {
-    position: relative;
-    border: 2px solid transparent;
-    background: linear-gradient(#0f0f0f, #0f0f0f) padding-box,
-                linear-gradient(90deg, #ff4d4d, #f9cb28) border-box;
-    border-radius: 0.5rem;
-}
-.hero-bg {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600"><rect width="800" height="600" fill="%23151515"/><path d="M0 0L800 600M800 0L0 600" stroke="%23252525" stroke-width="2"/></svg>');
-    background-size: cover;
-}
-.card {
-    background: rgba(25, 25, 25, 0.8);
-    border-radius: 0.5rem;
-    transition: all 0.3s ease;
-}
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
-.tab-active {
-    background: linear-gradient(90deg, #ff4d4d, #f9cb28);
-    color: #000;
-    font-weight: 600;
-}
-.step-item {
-    position: relative;
-    padding-left: 3rem;
-}
-.step-item::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 2rem;
-    height: 2rem;
-    background: linear-gradient(90deg, #ff4d4d, #f9cb28);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #000;
-    font-weight: bold;
-}
-.step-1::before { content: "1"; }
-.step-2::before { content: "2"; }
-.step-3::before { content: "3"; }
-.step-4::before { content: "4"; }
-/* Smooth scroll */
-html { scroll-behavior: smooth; }
-/* Flip card styles */
-.flip-card {
-    perspective: 1000px;
-    height: 400px;
-    box-shadow: 0 0 15px rgba(255, 77, 77, 0.3), 0 0 15px rgba(249, 203, 40, 0.3);
-    border-radius: 0.5rem;
-    transition: all 0.3s ease;
-}
-.flip-card:hover {
-    box-shadow: 0 0 25px rgba(255, 77, 77, 0.5), 0 0 25px rgba(249, 203, 40, 0.5);
-}
-.flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-}
-.flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-}
-.flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    border-radius: 0.5rem;
-    display: flex;
-    flex-direction: column;
-}
-.flip-card-front {
-    background: rgba(25, 25, 25, 0.8);
-}
-.flip-card-back {
-    background: rgba(30, 30, 30, 0.9);
-    transform: rotateY(180deg);
-}
-.booking-title {
-    position: relative;
-    border: 2px solid transparent;
-    background: linear-gradient(#0f0f0f, #0f0f0f) padding-box,
-                linear-gradient(90deg, #ff4d4d, #f9cb28) border-box;
-    border-radius: 0.5rem;
-    padding: 0.5rem 1rem;
-    display: inline-block;
-}
+<style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #0f0f0f;
+            color: #ffffff;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #ff4d4d, #f9cb28);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .gradient-border {
+            position: relative;
+            border: 2px solid transparent;
+            background: linear-gradient(#0f0f0f, #0f0f0f) padding-box,
+                        linear-gradient(90deg, #ff4d4d, #f9cb28) border-box;
+            border-radius: 0.5rem;
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600"><rect width="800" height="600" fill="%23151515"/><path d="M0 0L800 600M800 0L0 600" stroke="%23252525" stroke-width="2"/></svg>');
+            background-size: cover;
+        }
+        .card {
+            background: rgba(25, 25, 25, 0.8);
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        .tab-active {
+            background: linear-gradient(90deg, #ff4d4d, #f9cb28);
+            color: #000;
+            font-weight: 600;
+        }
+        .step-item {
+            position: relative;
+            padding-left: 3rem;
+        }
+        .step-item::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2rem;
+            height: 2rem;
+            background: linear-gradient(90deg, #ff4d4d, #f9cb28);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000;
+            font-weight: bold;
+        }
+        .step-1::before { content: "1"; }
+        .step-2::before { content: "2"; }
+        .step-3::before { content: "3"; }
+        .step-4::before { content: "4"; }
+        
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Flip card styles */
+        .flip-card {
+            perspective: 1000px;
+            height: 400px;
+            box-shadow: 0 0 15px rgba(255, 77, 77, 0.3), 0 0 15px rgba(249, 203, 40, 0.3);
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+        }
+        .flip-card:hover {
+            box-shadow: 0 0 25px rgba(255, 77, 77, 0.5), 0 0 25px rgba(249, 203, 40, 0.5);
+        }
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: 0.5rem;
+            display: flex;
+            flex-direction: column;
+        }
+        .flip-card-front {
+            background: rgba(25, 25, 25, 0.8);
+        }
+        .flip-card-back {
+            background: rgba(30, 30, 30, 0.9);
+            transform: rotateY(180deg);
+        }
+        .booking-title {
+            position: relative;
+            border: 2px solid transparent;
+            background: linear-gradient(#0f0f0f, #0f0f0f) padding-box,
+                        linear-gradient(90deg, #ff4d4d, #f9cb28) border-box;
+            border-radius: 0.5rem;
+            padding: 0.5rem 1rem;
+            display: inline-block;
+        }
+    </style>
