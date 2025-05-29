@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MEGA - Киберспортивный клуб</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-
 </head>
 <body>
     <!-- Header -->
@@ -45,17 +44,20 @@
     <section id="about" class="py-20 bg-black">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold mb-12 text-center">О нашем <span class="gradient-text">клубе</span></h2>
+            
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="card p-6">
                     <div class="text-4xl mb-4">🖥️</div>
                     <h3 class="text-xl font-bold mb-3">Топовое оборудование</h3>
                     <p class="text-gray-300">Мощные игровые компьютеры с видеокартами RTX 3060, высокочастотные мониторы и механические клавиатуры</p>
                 </div>
+                
                 <div class="card p-6">
                     <div class="text-4xl mb-4">🏆</div>
                     <h3 class="text-xl font-bold mb-3">Турниры и события</h3>
                     <p class="text-gray-300">Регулярные соревнования по популярным дисциплинам с призовыми фондами и подарками</p>
                 </div>
+                
                 <div class="card p-6">
                     <div class="text-4xl mb-4">🎮</div>
                     <h3 class="text-xl font-bold mb-3">Игровые зоны</h3>
@@ -66,65 +68,230 @@
     </section>
 
     <!-- Pricing Section -->
-   <section id="pricing" class="py-20 bg-[#18171c]">
-  <div class="container mx-auto px-4">
-    <h2 class="text-4xl font-bold mb-12 text-center gradient-text">Наши <span style="color:#ff9800;">тарифы</span></h2>
-    <div class="flex justify-center mb-8">
-      <div class="inline-flex rounded-md overflow-hidden shadow-md">
-        <button id="day-tab" class="tab-active px-6 py-3 text-lg font-semibold text-black" style="background: linear-gradient(90deg,#ff4d4d,#f9cb28);">День</button>
-        <button id="night-tab" class="bg-zinc-800 px-6 py-3 text-lg font-semibold text-white">Вечер</button>
-      </div>
-    </div>
-    <!-- Day Prices -->
-    <div id="day-prices" class="grid md:grid-cols-3 gap-10">
-      <!-- STANDART -->
-      <div class="card-tariff p-8 bg-[#18171c] rounded-xl shadow-md text-left hover:shadow-lg transition-all" style="box-shadow: 0 0 16px 1px #ff980040;">
-        <h3 class="text-2xl font-bold mb-4" style="color:#ff613d;">STANDART Зона</h3>
-        <div class="text-3xl font-extrabold mb-3">110 <span class="text-xl font-bold">₽</span><span class="text-lg text-gray-400 font-bold">/час</span></div>
-        <ul class="mb-6 text-base">
-          <li>✓ RTX 3060</li>
-          <li>✓ 144Hz, 27" IPS, 1ms мониторы</li>
-          <li>✓ Механические клавиатуры</li>
-        </ul>
-        <div class="text-gray-400 text-sm">Наведите для подробностей</div>
-      </div>
-      <!-- COMFORT -->
-      <div class="card-tariff p-8 bg-[#18171c] rounded-xl shadow-md text-left hover:shadow-lg transition-all" style="box-shadow: 0 0 16px 1px #ff980040;">
-        <h3 class="text-2xl font-bold mb-4" style="color:#ff944d;">COMFORT Зона</h3>
-        <div class="text-3xl font-extrabold mb-3">130 <span class="text-xl font-bold">₽</span><span class="text-lg text-gray-400 font-bold">/час</span></div>
-        <ul class="mb-6 text-base">
-          <li>✓ RTX 3060</li>
-          <li>✓ 280Hz, 24" 1ms мониторы</li>
-          <li>✓ Механические клавиатуры</li>
-        </ul>
-        <div class="text-gray-400 text-sm">Наведите для подробностей</div>
-      </div>
-      <!-- VIP -->
-      <div class="card-tariff p-8 bg-[#18171c] rounded-xl shadow-md text-left hover:shadow-lg transition-all" style="box-shadow: 0 0 16px 1px #ff980040;">
-        <h3 class="text-2xl font-bold mb-4" style="color:#ff613d;">VIP Зона</h3>
-        <div class="text-3xl font-extrabold mb-3">180 <span class="text-xl font-bold">₽</span><span class="text-lg text-gray-400 font-bold">/час</span></div>
-        <ul class="mb-6 text-base">
-          <li>✓ Отдельная комната</li>
-          <li>✓ Премиум периферия</li>
-          <li>✓ Персональное обслуживание</li>
-        </ul>
-        <div class="text-gray-400 text-sm">Наведите для подробностей</div>
-      </div>
-    </div>
-    <div class="mt-8 text-center text-gray-400 text-base">
-      <p>* День: с 08:00 до 16:00, Вечер: с 16:00 до 08:00</p>
-      <p>* Ночной тариф: с 23:00 до 08:00</p>
-    </div>
-  </div>
-</section>
-
+    <section id="pricing" class="py-20 bg-zinc-900">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-12 text-center">Наши <span class="gradient-text">тарифы</span></h2>
+            
+            <div class="flex justify-center mb-8">
+                <div class="inline-flex rounded-md overflow-hidden">
+                    <button id="day-tab" class="tab-active px-6 py-3 text-lg">День</button>
+                    <button id="night-tab" class="bg-zinc-800 px-6 py-3 text-lg">Вечер</button>
+                </div>
+            </div>
+            
+            <!-- Day Prices -->
+            <div id="day-prices" class="grid md:grid-cols-3 gap-8">
+                <!-- Standard Zone Day -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front p-6">
+                            <h3 class="text-2xl font-bold mb-2 gradient-text">STANDART Зона</h3>
+                            <div class="text-3xl font-bold my-4">110 ₽<span class="text-lg text-gray-400">/час</span></div>
+                            <ul class="text-gray-300 space-y-2 mt-auto mb-6">
+                                <li>✓ RTX 3060</li>
+                                <li>✓ 144Hz, 27" IPS, 1ms мониторы</li>
+                                <li>✓ Механические клавиатуры</li>
+                            </ul>
+                            <div class="text-center text-sm text-gray-400 mt-auto">
+                                Наведите для подробностей
+                            </div>
+                        </div>
+                        <div class="flip-card-back p-6">
+                            <h3 class="text-2xl font-bold mb-4 gradient-text">STANDART Зона</h3>
+                            <p class="text-gray-300 mb-6">Тарифы:</p>
+                            <ul class="text-gray-300 space-y-4 mb-6">
+                                <li>• 1 час = 110 ₽</li>
+                                <li>• 3 часа = 300 ₽</li>
+                                <li>• 5 часов = 470 ₽</li>
+                                <li>• Ночной = 450 ₽</li>
+                            </ul>
+                            <a href="#booking" class="block text-center gradient-border px-6 py-3 hover:opacity-90 transition mt-auto">Забронировать</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Comfort Zone Day -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front p-6">
+                            <h3 class="text-2xl font-bold mb-2 gradient-text">COMFORT Зона</h3>
+                            <div class="text-3xl font-bold my-4">130 ₽<span class="text-lg text-gray-400">/час</span></div>
+                            <ul class="text-gray-300 space-y-2 mt-auto mb-6">
+                                <li>✓ RTX 3060</li>
+                                <li>✓ 280Hz, 24" 1ms мониторы</li>
+                                <li>✓ Механические клавиатуры</li>
+                            </ul>
+                            <div class="text-center text-sm text-gray-400 mt-auto">
+                                Наведите для подробностей
+                            </div>
+                        </div>
+                        <div class="flip-card-back p-6">
+                            <h3 class="text-2xl font-bold mb-4 gradient-text">COMFORT Зона</h3>
+                            <p class="text-gray-300 mb-6">Тарифы:</p>
+                            <ul class="text-gray-300 space-y-4 mb-6">
+                                <li>• 1 час = 130 ₽</li>
+                                <li>• 3 часа = 350 ₽</li>
+                                <li>• 5 часов = 580 ₽</li>
+                                <li>• Ночной = 550 ₽</li>
+                            </ul>
+                            <a href="#booking" class="block text-center gradient-border px-6 py-3 hover:opacity-90 transition mt-auto">Забронировать</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- VIP Zone Day -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front p-6">
+                            <h3 class="text-2xl font-bold mb-2 gradient-text">VIP Зона</h3>
+                            <div class="text-3xl font-bold my-4">180 ₽<span class="text-lg text-gray-400">/час</span></div>
+                            <ul class="text-gray-300 space-y-2 mt-auto mb-6">
+                                <li>✓ Отдельная комната</li>
+                                <li>✓ Премиум периферия</li>
+                                <li>✓ Персональное обслуживание</li>
+                            </ul>
+                            <div class="text-center text-sm text-gray-400 mt-auto">
+                                Наведите для подробностей
+                            </div>
+                        </div>
+                        <div class="flip-card-back p-6">
+                            <h3 class="text-2xl font-bold mb-4 gradient-text">VIP Зона</h3>
+                            <p class="text-gray-300 mb-6">Тарифы:</p>
+                            <ul class="text-gray-300 space-y-4 mb-6">
+                                <li>• 1 час = 180 ₽</li>
+                                <li>• 3 часа = 500 ₽</li>
+                                <li>• 5 часов = 800 ₽</li>
+                                <li>• Ночной = 750 ₽</li>
+                            </ul>
+                            <a href="#booking" class="block text-center gradient-border px-6 py-3 hover:opacity-90 transition mt-auto">Забронировать</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Night Prices -->
+            <div id="night-prices" class="grid md:grid-cols-3 gap-8 hidden">
+                <!-- Standard Zone Night -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front p-6">
+                            <h3 class="text-2xl font-bold mb-2 gradient-text">STANDART Зона</h3>
+                            <div class="text-3xl font-bold my-4">ОТ 120 ₽<span class="text-lg text-gray-400">/час</span></div>
+                            <ul class="text-gray-300 space-y-2 mt-auto mb-6">
+                                <li>✓ RTX 3060</li>
+                                <li>✓ 144Hz, 27" IPS, 1ms мониторы</li>
+                                <li>✓ Механические клавиатуры</li>
+                            </ul>
+                            <div class="text-center text-sm text-gray-400 mt-auto">
+                                Наведите для подробностей
+                            </div>
+                        </div>
+                        <div class="flip-card-back p-6">
+                            <h3 class="text-2xl font-bold mb-4 gradient-text">STANDART Зона</h3>
+                            <p class="text-gray-300 mb-6">Тарифы:</p>
+                            <ul class="text-gray-300 space-y-4 mb-6">
+                                <li>• 1 час = 120 ₽</li>
+                                <li>• 3 часа = 330 ₽</li>
+                                <li>• 5 часов = 500 ₽</li>
+                                <li>• Ночной = 450 ₽</li>
+                            </ul>
+                            <a href="#booking" class="block text-center gradient-border px-6 py-3 hover:opacity-90 transition mt-auto">Забронировать</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Comfort Zone Night -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front p-6">
+                            <h3 class="text-2xl font-bold mb-2 gradient-text">COMFORT Зона</h3>
+                            <div class="text-3xl font-bold my-4">ОТ 140 ₽<span class="text-lg text-gray-400">/час</span></div>
+                            <ul class="text-gray-300 space-y-2 mt-auto mb-6">
+                                <li>✓ RTX 3060</li>
+                                <li>✓ 280Hz, 24" 1ms мониторы</li>
+                                <li>✓ Механические клавиатуры</li>
+                            </ul>
+                            <div class="text-center text-sm text-gray-400 mt-auto">
+                                Наведите для подробностей
+                            </div>
+                        </div>
+                        <div class="flip-card-back p-6">
+                            <h3 class="text-2xl font-bold mb-4 gradient-text">COMFORT Зона</h3>
+                            <p class="text-gray-300 mb-6">Тарифы:</p>
+                            <ul class="text-gray-300 space-y-4 mb-6">
+                                <li>• 1 час = 140 ₽</li>
+                                <li>• 3 часа = 390 ₽</li>
+                                <li>• 5 часов = 590 ₽</li>
+                                <li>• Ночной = 550 ₽</li>
+                            </ul>
+                            <a href="#booking" class="block text-center gradient-border px-6 py-3 hover:opacity-90 transition mt-auto">Забронировать</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- VIP Zone Night -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front p-6">
+                            <h3 class="text-2xl font-bold mb-2 gradient-text">VIP Зона</h3>
+                            <div class="text-3xl font-bold my-4">ОТ 200 ₽<span class="text-lg text-gray-400">/час</span></div>
+                            <ul class="text-gray-300 space-y-2 mt-auto mb-6">
+                                <li>✓ Отдельная комната</li>
+                                <li>✓ Премиум периферия</li>
+                                <li>✓ Персональное обслуживание</li>
+                            </ul>
+                            <div class="text-center text-sm text-gray-400 mt-auto">
+                                Наведите для подробностей
+                            </div>
+                        </div>
+                        <div class="flip-card-back p-6">
+                            <h3 class="text-2xl font-bold mb-4 gradient-text">VIP Зона</h3>
+                            <p class="text-gray-300 mb-6">Тарифы:</p>
+                            <ul class="text-gray-300 space-y-4 mb-6">
+                                <li>• 1 час = 200 ₽</li>
+                                <li>• 3 часа = 550 ₽</li>
+                                <li>• 5 часов = 850 ₽</li>
+                                <li>• Ночной = 750 ₽</li>
+                            </ul>
+                            <a href="#booking" class="block text-center gradient-border px-6 py-3 hover:opacity-90 transition mt-auto">Забронировать</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 text-center text-gray-400">
+                <p>* День: с 08:00 до 16:00, Вечер: с 16:00 до 08:00</p>
+                <p>* Ночной тариф: с 23:00 до 08:00</p>
+            </div>
+        </div>
+    </section>
 
     <!-- Booking Section -->
     <section id="booking" class="py-20 bg-black">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold mb-12 text-center booking-title uppercase">КАК ЗАБРОНИРОВАТЬ?</h2>
+            
             <div class="max-w-3xl mx-auto space-y-10">
-                <!-- ... шаги бронирования ... -->
+                <div class="step-item step-1">
+                    <h3 class="text-2xl font-bold mb-2">Выберите дату и время</h3>
+                    <p class="text-gray-300">Определитесь, когда вы хотите посетить наш клуб и на сколько часов</p>
+                </div>
+                
+                <div class="step-item step-2">
+                    <h3 class="text-2xl font-bold mb-2">Выберите игровую зону</h3>
+                    <p class="text-gray-300">Решите, какая зона подходит вам: Standart, Comfort или VIP зона</p>
+                </div>
+                
+                <div class="step-item step-3">
+                    <h3 class="text-2xl font-bold mb-2">Позвоните Нам</h3>
+                    <a href="tel:+79280762020" class="gradient-border inline-block px-4 py-2 font-medium">+7 928 076-20-20</a>
+                </div>
+                
+                <div class="step-item step-4">
+                    <h3 class="text-2xl font-bold mb-2">Готово! Приходите в назначенное время и наслаждайтесь игрой</h3>
+                    <p class="text-gray-300">Мы будем ждать вас в клубе</p>
+                    <p class="text-sm text-gray-400 mt-2">* Бронь аннулируется при опоздании на 15 минут</p>
+                </div>
             </div>
         </div>
     </section>
@@ -133,8 +300,31 @@
     <section class="py-20 bg-zinc-900">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold mb-6 text-center">Мы — официальное представительство <span class="gradient-text">ФКС России</span> в регионе</h2>
+            
             <div class="max-w-3xl mx-auto">
-                <!-- ... контент ... -->
+                <p class="text-lg text-gray-300 text-center mb-8">
+                    Это не просто любительские турниры — мы развиваем киберспорт как настоящий спорт. Участвуем в Чемпионатах России, Школьной и Студенческой лигах. Наши игроки получают спортивные разряды и растут на уровне страны.
+                </p>
+                
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="card p-6 text-center">
+                        <div class="text-4xl mb-4">🏆</div>
+                        <h3 class="text-xl font-bold mb-2">Официальные турниры</h3>
+                        <p class="text-gray-400">Соревнования под эгидой Федерации компьютерного спорта</p>
+                    </div>
+                    
+                    <div class="card p-6 text-center">
+                        <div class="text-4xl mb-4">🎓</div>
+                        <h3 class="text-xl font-bold mb-2">Школьная и Студенческая лиги</h3>
+                        <p class="text-gray-400">Развитие молодых талантов в киберспорте</p>
+                    </div>
+                    
+                    <div class="card p-6 text-center">
+                        <div class="text-4xl mb-4">🥇</div>
+                        <h3 class="text-xl font-bold mb-2">Спортивные разряды</h3>
+                        <p class="text-gray-400">Официальное признание достижений игроков</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -143,8 +333,50 @@
     <section id="contacts" class="py-20 bg-black">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold mb-12 text-center">Наши <span class="gradient-text">контакты</span></h2>
+            
             <div class="max-w-3xl mx-auto grid md:grid-cols-2 gap-10">
-                <!-- ... контакты и соцсети ... -->
+                <div>
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-bold mb-3">Адрес</h3>
+                        <p class="text-gray-300">г. Нальчик, ул. Чернышевского 177, ТЦ "СРЕДА" 4 этаж</p>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-bold mb-3">Режим работы</h3>
+                        <p class="text-gray-300">Круглосуточно, без выходных</p>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-bold mb-3">Сотрудничество и предложения</h3>
+                        <a href="https://t.me/hiimdisa" target="_blank" class="gradient-border inline-block px-4 py-2 font-medium">Связаться</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Мы в соцсетях</h3>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="https://vk.com/megakbr" target="_blank" class="flex items-center gap-2 bg-zinc-800 hover:bg-zinc-700 transition px-4 py-3 rounded-lg">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21.579 6.855c.14-.465 0-.806-.662-.806h-2.193c-.558 0-.813.295-.953.619 0 0-1.115 2.719-2.695 4.482-.51.513-.743.675-1.021.675-.139 0-.341-.162-.341-.627V6.855c0-.558-.161-.806-.626-.806H9.642c-.348 0-.558.258-.558.504 0 .528.79.65.871 2.138v3.228c0 .707-.127.836-.407.836-.743 0-2.551-2.729-3.624-5.853-.209-.607-.42-.852-.98-.852H2.752c-.627 0-.752.295-.752.619 0 .582.743 3.462 3.461 7.271 1.812 2.601 4.363 4.011 6.687 4.011 1.393 0 1.565-.313 1.565-.853v-1.966c0-.626.133-.752.574-.752.324 0 .882.164 2.183 1.417 1.486 1.486 1.732 2.153 2.567 2.153h2.192c.626 0 .939-.313.759-.932-.197-.615-.907-1.51-1.849-2.569-.512-.604-1.277-1.254-1.51-1.579-.325-.419-.231-.604 0-.976.001.001 2.672-3.761 2.95-5.04z"/>
+                            </svg>
+                            <span>ВКонтакте</span>
+                        </a>
+                        
+                        <a href="https://instagram.com/megakbr" target="_blank" class="flex items-center gap-2 bg-zinc-800 hover:bg-zinc-700 transition px-4 py-3 rounded-lg">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                            <span>Instagram</span>
+                        </a>
+                        
+                        <a href="https://t.me/megakbr" target="_blank" class="flex items-center gap-2 bg-zinc-800 hover:bg-zinc-700 transition px-4 py-3 rounded-lg">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.417 15.181l-.397 5.584c.568 0 .814-.244 1.109-.537l2.663-2.545 5.518 4.041c1.012.564 1.725.267 1.998-.931l3.622-16.972.001-.001c.321-1.496-.541-2.081-1.527-1.714l-21.29 8.151c-1.453.564-1.431 1.374-.247 1.741l5.443 1.693 12.643-7.911c.595-.394 1.136-.176.691.218l-10.227 9.183z"/>
+                            </svg>
+                            <span>Telegram</span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -156,6 +388,5 @@
             <p class="text-gray-400">© 2023 MEGA Киберспортивный клуб. Все права защищены.</p>
         </div>
     </footer>
-    <script src="script.js"></script>
 </body>
 </html>
