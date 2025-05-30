@@ -75,7 +75,7 @@ html {
     background: transparent; /* на всякий случай */
 }
 .flip-card:hover {
-    box-shadow: none;
+    box-shadow: 0 0 25px rgba(255, 77, 77, 0.5), 0 0 25px rgba(249, 203, 40, 0.5);
 }
 
 .flip-card-inner {
