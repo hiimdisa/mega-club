@@ -74,7 +74,7 @@ html {
 }
 .flip-card:hover {
     box-shadow: none;
-    /* Если хочешь, чтобы исчезало не резко, а плавно — оставь transition как есть */
+    /* чтобы исчезало не резко, а плавно — оставить transition как есть */
 }
 
 .flip-card-inner {
