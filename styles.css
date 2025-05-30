@@ -1,4 +1,3 @@
-
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #0f0f0f;
@@ -18,7 +17,7 @@ body {
     border-radius: 0.5rem;
 }
 .hero-bg {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600"><rect width="800" height="600" fill="%23151515"/><path d="M0 0L800 600M800 0L0 600" stroke="%23252525" stroke-width="2"/></svg>');
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600"><rect width="800"[...]');
     background-size: cover;
 }
 .card {
@@ -59,12 +58,11 @@ body {
 .step-3::before { content: "3"; }
 .step-4::before { content: "4"; }
 
-/* Smooth scroll */
+/* Плавность */
 html {
     scroll-behavior: smooth;
 }
-
-/* Flip card styles */
+/* Разворот карточки */
 .flip-card {
     perspective: 1000px;
     height: 400px;
@@ -72,14 +70,12 @@ html {
     transition: box-shadow 0.3s;
     box-shadow: 0 0 32px 8px rgba(255,77,77,0.22), 0 0 40px 10px rgba(249,203,40,0.14);
 }
-/* Эти стили вместо старого .flip-card:hover */
+/* Стили для перевёрнутой карточки */
 .flip-card.flipped {
-    /* Тень видна, когда карточка раскрыта (back) */
     box-shadow: 0 0 32px 8px rgba(255,77,77,0.22), 0 0 40px 10px rgba(249,203,40,0.14);
 }
 .flip-card.flipping,
 .flip-card:hover:not(.flipped) {
-    /* Тень убирается, пока идёт анимация flip */
     box-shadow: none;
 }
 .flip-card-front, .flip-card-back {
@@ -99,12 +95,6 @@ html {
     background: rgba(30, 30, 30, 0.9);
     transform: rotateY(180deg);
 }
-.flip-card-back {
-    background: rgba(30, 30, 30, 0.9);
-    transform: rotateY(180deg);
-}
-
-
 .booking-title {
     position: relative;
     border: 2px solid transparent;
