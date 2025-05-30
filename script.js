@@ -41,16 +41,3 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-// Новое состояние для .flipped & .flipping
-document.querySelectorAll('.flip-card').forEach(card => {
-    card.addEventListener('mouseenter', () => {
-        card.classList.add('flipping');
-        setTimeout(() => {
-            card.classList.remove('flipping');
-            card.classList.add('flipped');
-        }, 600); // 600ms — время анимации
-    });
-    card.addEventListener('mouseleave', () => {
-        card.classList.remove('flipped');
-    });
-});
