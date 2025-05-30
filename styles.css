@@ -69,13 +69,12 @@ html {
     perspective: 1000px;
     height: 400px;
     border-radius: 0.5rem;
-    transition: box-shadow 0.3s;
-    box-shadow: 0 0 24px 3px rgba(255,77,77,0.18), 0 0 28px 5px rgba(249,203,40,0.11);
-    /* overflow: visible;    // обычно не нужно, но если вдруг — добавь */
-    background: transparent; /* на всякий случай */
+    transition: box-shadow 0.4s;
+    box-shadow: 0 0 32px 8px rgba(255,77,77,0.22), 0 0 40px 10px rgba(249,203,40,0.14);
 }
 .flip-card:hover {
-    box-shadow: 0 0 25px rgba(255, 77, 77, 0.5), 0 0 25px rgba(249, 203, 40, 0.5);
+    box-shadow: none;
+    /* Если хочешь, чтобы исчезало не резко, а плавно — оставь transition как есть */
 }
 
 .flip-card-inner {
@@ -100,22 +99,19 @@ html {
     display: flex;
     flex-direction: column;
 }
-
 .flip-card-front {
     background: rgba(25, 25, 25, 0.8);
-    z-index: 2;
 }
-
-.flip-card-back {
-    background: rgba(30, 30, 30, 0.9);
-    transform: rotateY(180deg);
-    z-index: 1;
-}
-
 .flip-card-back {
     background: rgba(30, 30, 30, 0.9);
     transform: rotateY(180deg);
 }
+.flip-card-back {
+    background: rgba(30, 30, 30, 0.9);
+    transform: rotateY(180deg);
+}
+
+
 .booking-title {
     position: relative;
     border: 2px solid transparent;
